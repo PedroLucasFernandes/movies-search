@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Movies</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="import-container">
+        Data: <textarea id="import-input"></textarea>
+        <br />
+        <button id="import-button">Import</button>
+    </div>
+    <div id="presentation-container" class="hidden">
+        <strong>Filter</strong>
+        <br />
+        Duration: from <input id="min-duration" /> to <input id="max-duration" />
+        <br />
+        IMDB Score: from <input id="min-score" /> to <input id="max-score" />
+        <br />
+        Budget: from <input id="min-budget" /> to <input id="max-budget" />
+        <br />
+        <hr />
+        <strong>Sorting</strong>
+        <br />
+        <select id="sort-property">
+            <option>Title</option>
+            <option>Year</option>
+            <option>Budget</option>
+        </select>
+        <select id="sort-order">
+            <option>Ascending</option>
+            <option>Descending</option>
+        </select>
+        <button id="apply-button">Apply</button>
+        <hr />
+        <br />
+        <strong>Movies</strong>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Year</th>
+                    <th>Score</th>
+                    <th>Duration</th>
+                    <th>Budget</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>   
+
+    <script src="index.js"></script>
+</body>
+</html>
